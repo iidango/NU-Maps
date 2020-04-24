@@ -45,11 +45,13 @@ img {
 
 /* ボタン */
 .button {
-    font-size: 1.375rem;
-    background: #0bd;
-    color: #fff;
-    border-radius: 5px;
-    padding: 18px 32px;
+    bottom: 40px;
+    font-size: 40px;
+    background: #fff;
+    color: #28a44a;
+    border-radius: 20px;
+    padding: 30px 100px;
+    margin-top: 10px;
 }
 .button:hover {
     background: #0090aa;
