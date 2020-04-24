@@ -49,6 +49,8 @@ img {
     font-size: 40px;
     background: #fff;
     color: #28a44a;
+    border-style: solid;
+    border-color: #008000;
     border-radius: 20px;
     padding: 30px 100px;
     margin-top: 10px;
