@@ -10,15 +10,12 @@
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script><script src="//maps.googleapis.com/maps/api/js?key={APIキー}"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&libraries=places"></script>
   </head>
-
-
   <header>
-
     <nav style="background-color: #28a44a;"class="navbar navbar-expand-lg navbar-light bg-light">
       <a style="font-size: 40px; margin-left: 70px;"class="navbar-brand" href="index.html">NU Maps</a>
-
       <button style="border-color: rgba(0,0,0,0);"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span style="color: #28a44a;"class="navbar-toggler-icon"></span>
       </button>
@@ -35,14 +32,24 @@
           <li>
       </div>
     </nav>
-
 </header>
 
-<body style="background-color:#00ffff">
 
-<div style="background-color:#ffffff; padding: 10px; margin-right:0px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px; border: 1px solid #333333; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
-🔍｜現在地　　　＞<a href="root.html">目的地</a>
-</div>
+<body>
 
-</body>
+    <div id="map" style="width:720px; height:600px"></div>
+
+    <script type="text/javascript">
+    function initMap() {
+      var opts = {
+        zoom: 17,
+        center: new google.maps.LatLng(35.154639, 136.966778)
+      };
+      var map = new google.maps.Map(document.getElementById("map"), opts);
+    }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap">
+    </script>
+  </body>
 </html>
