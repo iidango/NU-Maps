@@ -8,6 +8,7 @@
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery読み込み -->
+    <script src="js/jquery-1.5.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
@@ -43,7 +44,7 @@
             <a class="nav-link" href="#">NU Mapsの使い方</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">言語/Language</a>
+              <a class="nav-link" href="root.html">言語/Language</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="login.html">ログイン</a>
@@ -62,7 +63,22 @@
 <div style="font-size: 20px;background-color:#ffffff; padding: 10px; height: 300px;margin-right:0px; margin-left: 10px; margin-top: 15px; margin-bottom: 10px; border:1px ridge; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
         <div style="text-align:center;">NU-Mapsとは</div>
         <hr style="margin-top: 2px;">
-
-
+<script>
+        $(function(){
+         //ページ内のaタグ群を取得。aTagsに配列として代入。
+          var aTags = $('a');
+             //全てのaタグについて処理
+      	aTags.each(function(){
+                //aタグのhref属性からリンク先url取得
+      	  var url = $(this).attr('href');
+      　　　//念のため、href属性は削除
+      	  $(this).removeAttr('href');
+                //クリックイベントをバインド
+      	  $(this).click(function(){
+      	    location.href = url;
+      	  });
+          });
+        });
+</script>
 </body>
 </html>
