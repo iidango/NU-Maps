@@ -64,49 +64,7 @@
 <body style="background-color: #4ad5ff;">
 
 <div style="font-size: 20px;background-color:#ffffff; padding: 10px; margin-right:0px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px; border:1px ridge; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
-<div style="text-align: center;"><div style="margin-right:10px;">現在地　　　＞　　　<a onclick="clickBtn2()">目的地</a></div></div>
-</div>
-<!--
-<div style="font-size: 20px;background-color:#ffffff; padding: 10px; height: 300px;margin-right:0px; margin-left: 10px; margin-top: 15px; margin-bottom: 10px; border:1px ridge; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
-        <div style="text-align:center;">NU-Mapsとは</div>
-        <hr style="margin-top: 2px;">
--->
-<div id="p2" style="font-size: 20px;background-color:#ffffff; padding: 10px; margin-right:0px; margin-left: 10px; margin-top: 15px; margin-bottom: 10px; border:1px ridge; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
-         <div style="text-align:center;">　　　目的地を選択　<a style="font-size: 15px" href="index.html">キャンセル<a/></div>
-        <hr style="margin-top: 2px;">
-
-       <p style="font-size: 20px;margin-left: 10px; margin-top: 10px;">お探しの建物名</p>
-       <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
-       <select class="form-control form-control-lg">
-         <option value="サンプル1">全学教育等</option>
-         <option value="サンプル2">中央図書館</option>
-         <option value="サンプル3">選択肢のサンプル3</option>
-         <option value="サンプル4">選択肢のサンプル4</option>
-         <option value="サンプル5">選択肢のサンプル5</option>
-       </select>
-       </div>
-<!--
-<div style="padding: 10px; margin-right:0px; margin-left: 10px;  margin-bottom: 10px; border: 1px solid #333333; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
-
-</div>
--->
-        <p style="margin-left: 10px; margin-top: 10px;">お探しの部屋名</p>
-        <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
-        <select  class="form-control form-control-lg">
-          <option value="サンプル1">C10</option>
-          <option value="サンプル2">C11</option>
-          <option value="サンプル3">選択肢のサンプル3</option>
-          <option value="サンプル4">選択肢のサンプル4</option>
-          <option value="サンプル5">選択肢のサンプル5</option>
-        </select>
-       </div>
-        <div style="margin-top: 45px;text-align: center;">
-          <a href="search.html">
-            <button style="background-color:#ffffff; width:160px;"type="button" class="btn btn-secondary btn-lg"><div style="color:#00bfff;">検索</div>
-            </button>
-          </a>
-        </div>
-      </div>
+<div style="text-align: center;"><div style="margin-right:10px;">現在地　　　＞　　　<a href="root.html">目的地</a></div></div>
       <!--
 <input type="button" value="ボタン２" onclick="clickBtn2()" />
 -->
@@ -119,23 +77,6 @@
         console.log('ServiceWorker registration failed: ', err);
     });
     }
-</script>
-<script>
-
-//初期表示は非表示
-document.getElementById("p2").style.visibility ="hidden";
-$('.selector').fadeIn();
-function clickBtn2(){
-	const p2 = document.getElementById("p2");
-
-	if(p2.style.visibility=="visible"){
-		// hiddenで非表示
-		p2.style.visibility ="hidden";
-	}else{
-		// visibleで表示
-		p2.style.visibility ="visible";
-	}
-}
 </script>
 </body>
 </html>

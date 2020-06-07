@@ -8,7 +8,6 @@
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery読み込み -->
-    <script src="js/jquery-1.5.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
@@ -19,42 +18,38 @@
     <meta name="apple-mobile-web-app-title" content="NU-Maps">
     <!-- ホーム画面に表示されるアプリアイコン -->
     <link rel="apple-touch-icon" href="images/img.png">
-    <script type="text/javascript" src="hum_icon.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
-  <header style="background-color: #fff;">
-    <nav style="border:1px ridge;　background-color: #fff;">
 
-   <div id="hamburger">
-       <div class="icon-animation type-1">
-           <span class="top"></span>
-           <span class="middle"></span>
-           <span class="bottom"></span>
-       </div>
-   </div>
-   <div class="nav_sp">
-       <div class="nav_sp_top"><a href="#"></a></div>
-       <ul class="clearfix">
-         <li><a href="index.html">お知らせ</a></li>
-         <li><a href="#">NU-Mapsの使い方</a></li>
-         <li><a href="#">言語/Language</a></li>
-         <li><a href="login.html">ログイン</a></li>
-       </ul>
-   </div>
-   <div id="wrapper"></div>
+  <header>
 
-
+    <div style="border:1px ridge;border-bottom-left-radius: 30px;　background-color: #fff;"class="navbar navbar-expand-lg navbar-light bg-light">
       <!--
-      <div style="border:1px ridge;border-bottom-left-radius: 30px;　background-color: #fff;">
       <a style="font-family:arial block; font-size: 40px; margin-left: 20px;margin-right:auto;margin-left:auto;"class="navbar-brand" href="index.html">NU Maps</a>
     -->
-    <div style="margin-left:30px;">
-      <img style="width:40px;height:40px;margin-top:-25px;"src="images/img.png" alt="サンプル" align="top">
-    <a style="font-family:arial block; color:#4B7198;font-size: 40px; margin:0 auto;margin-right:50px;" href="index.html">NU Maps</a>
-    </div>
 
-</nav>
+      <a style="font-family:arial block; color:#4B7198;font-size: 40px; margin:0 auto;margin-right:50px;"class="navbar-brand" href="index.html">NU Maps</a>
+
+      <button style="border-color: rgba(0,0,0,0);"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">お知らせ <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">NU Mapsの使い方</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">言語/Language</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="login.html">ログイン</a>
+          </li>
+      </div>
+    </div>
 
 </header>
 
@@ -100,5 +95,4 @@
           </a>
         </div>
       </div>
-
 </body>
