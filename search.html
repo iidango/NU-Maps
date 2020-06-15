@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,12 +23,15 @@
       #map {
         height: 100%;
       }
+
       /* Optional: Makes the sample page fill the window. */
-      html, body {
+      html,
+      body {
         height: 100%;
         margin: 0;
         padding: 0;
       }
+
       #floating-panel {
         position: absolute;
         top: 10px;
@@ -37,17 +41,19 @@
         padding: 5px;
         border: 1px solid #999;
         text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
-      #right-panel {
-        font-family: 'Roboto','sans-serif';
+        font-family: 'Roboto', 'sans-serif';
         line-height: 30px;
         padding-left: 10px;
       }
 
-      #right-panel select, #right-panel input {
+      #right-panel {
+        font-family: 'Roboto', 'sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #right-panel select,
+      #right-panel input {
         font-size: 15px;
       }
 
@@ -58,17 +64,20 @@
       #right-panel i {
         font-size: 12px;
       }
+
       #right-panel {
         height: 100%;
         float: right;
         width: 390px;
         overflow: auto;
       }
+
       #map {
         margin-right: 0px;
       }
+
       #floating-panel {
-        width:100%;
+        width: 100%;
         background: #fff;
         padding: 5px;
         font-size: 15px;
@@ -77,11 +86,13 @@
         box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
         display: none;
       }
+
       @media print {
         #map {
           height: 500px;
           margin: 0;
         }
+
         #right-panel {
           float: none;
           width: auto;
@@ -93,115 +104,138 @@
   <header style="background-color: #fff;">
     <nav style="border:1px ridge;　background-color: #fff;">
 
-   <div id="hamburger">
-       <div class="icon-animation type-1">
-           <span class="top"></span>
-           <span class="middle"></span>
-           <span class="bottom"></span>
-       </div>
-   </div>
-   <div class="nav_sp">
-       <div class="nav_sp_top"><a href="#"></a></div>
-       <ul class="clearfix">
-         <li><a href="index.html">お知らせ</a></li>
-         <li><a href="#">NU-Mapsの使い方</a></li>
-         <li><a href="#">言語/Language</a></li>
-         <li><a href="login.html">ログイン</a></li>
-       </ul>
-   </div>
-   <div id="wrapper"></div>
+      <div id="hamburger">
+        <div class="icon-animation type-1">
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </div>
+      </div>
+      <div class="nav_sp">
+        <div class="nav_sp_top"><a href="#"></a></div>
+        <ul class="clearfix">
+          <li><a href="index.html">お知らせ</a></li>
+          <li><a href="#">NU-Mapsの使い方</a></li>
+          <li><a href="#">言語/Language</a></li>
+          <li><a href="login.html">ログイン</a></li>
+        </ul>
+      </div>
+      <div id="wrapper"></div>
 
 
       <!--
       <div style="border:1px ridge;border-bottom-left-radius: 30px;　background-color: #fff;">
       <a style="font-family:arial block; font-size: 40px; margin-left: 20px;margin-right:auto;margin-left:auto;"class="navbar-brand" href="index.html">NU Maps</a>
     -->
-    <div style="margin-left:30px;">
-      <img style="width:40px;height:40px;margin-top:-25px;"src="images/img.png" alt="サンプル" align="top">
-    <a style="font-family:arial block; color:#4B7198;font-size: 40px; margin:0 auto;margin-right:50px;" href="index.html">NU Maps</a>
-    </div>
+      <div style="margin-left:30px;">
+        <img style="width:40px;height:40px;margin-top:-25px;" src="images/img.png" alt="サンプル" align="top">
+        <a style="font-family:arial block; color:#4B7198;font-size: 40px; margin:0 auto;margin-right:50px;"
+          href="index.html">NU Maps</a>
+      </div>
 
-</nav>
+    </nav>
 
-</header>
-<body>
+  </header>
 
   <body>
-    <div style="f"id="floating-panel">
-     現在地
-      <select style=""id="start" class="custom-select custom-select-sm">
-        <option value="名古屋大学駅">名古屋大学駅</option>
-      </select>
 
-      目的地
-      <select id="end" class="custom-select custom-select-sm">
-        <option value=""></option>
-        <option value="全学教育棟本館">全学教育棟本館</option>
-        <option value="全学教育棟A館">全学教育棟A館</option>
-        <option value="名古屋大学 文系総合館">文系総合館</option>
-        <option value="名古屋大学附属図書館">名古屋大学附属図書館</option>
-        <option value="名古屋大学本部学務部 教養教育院全学教育教務掛">教養教育院全学教育教務課</option>
-        <option value="名古屋大学 生協北部食堂">生協北部食堂</option>
-        <option value="名古屋大学 生協南部書籍店">生協南部書籍店</option>
-        <option value="豊田講堂">豊田講堂</option>
-        <option value="名古屋大学 博物館">名古屋大学 博物館</option>
-        <option value="ナショナルイノベーションコンプレックス">NIC</option>
-        <option value="ファミリーマート 名古屋大学店">Lファミリーマート 名古屋大学店</option>
-      </select>
-    </div>
-    </div>
-    <!--<div id="right-panel"></div>-->
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var directionsRenderer = new google.maps.DirectionsRenderer;
-        var directionsService = new google.maps.DirectionsService;
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: {lat: 35.154639, lng:136.966778}
-        });
-        directionsRenderer.setMap(map);
-        directionsRenderer.setPanel(document.getElementById('right-panel'));
+    <body>
+      <div style="f" id="floating-panel">
+        現在地
+        <select style="" id="start" class="custom-select custom-select-sm">
+          <option value="名古屋大学駅">名古屋大学駅</option>
+        </select>
 
-        var control = document.getElementById('floating-panel');
-        control.style.display = 'block';
-        map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+        目的地
+        <select id="end" class="custom-select custom-select-sm">
+          <option value=""></option>
+          <option value="全学教育棟本館">全学教育棟本館</option>
+          <option value="全学教育棟A館">全学教育棟A館</option>
+          <option value="名古屋大学 文系総合館">文系総合館</option>
+          <option value="名古屋大学附属図書館">名古屋大学附属図書館</option>
+          <option value="名古屋大学本部学務部 教養教育院全学教育教務掛">教養教育院全学教育教務課</option>
+          <option value="名古屋大学 生協北部食堂">生協北部食堂</option>
+          <option value="名古屋大学 生協南部書籍店">生協南部書籍店</option>
+          <option value="豊田講堂">豊田講堂</option>
+          <option value="名古屋大学 博物館">名古屋大学 博物館</option>
+          <option value="ナショナルイノベーションコンプレックス">NIC</option>
+          <option value="ファミリーマート 名古屋大学店">Lファミリーマート 名古屋大学店</option>
+        </select>
+      </div>
+      </div>
+      <!--<div id="right-panel"></div>-->
+      <div id="map"></div>
+      <script>
+        function initMap() {
+          var directionsRenderer = new google.maps.DirectionsRenderer;
+          var directionsService = new google.maps.DirectionsService;
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: {
+              lat: 35.154639,
+              lng: 136.966778
+            }
+          });
+          directionsRenderer.setMap(map);
+          directionsRenderer.setPanel(document.getElementById('right-panel'));
 
-        var onChangeHandler = function() {
-          calculateAndDisplayRoute(directionsService, directionsRenderer);
-        };
-        document.getElementById('start').addEventListener('change', onChangeHandler);
-        document.getElementById('end').addEventListener('change', onChangeHandler);
-      }
+          var control = document.getElementById('floating-panel');
+          control.style.display = 'block';
+          map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 
-      function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-        var start = document.getElementById('start').value;
-        var end = document.getElementById('end').value;
-        directionsService.route({
-          origin: start,
-          destination: end,
-          travelMode: 'WALKING'
-        }, function(response, status) {
-          if (status === 'OK') {
-            directionsRenderer.setDirections(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap">
-    </script>
-    <script>
-        <!-- service workerの登録関係 -->
-        if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service_worker.js').then(function(registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }).catch(function(err) {
-            console.log('ServiceWorker registration failed: ', err);
+          var onChangeHandler = function () {
+            calculateAndDisplayRoute(directionsService, directionsRenderer);
+          };
+          document.getElementById('start').addEventListener('change', onChangeHandler);
+          document.getElementById('end').addEventListener('change', onChangeHandler);
+        }
+
+        function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+          var start = document.getElementById('start').value;
+          var end = document.getElementById('end').value;
+          directionsService.route({
+            origin: start,
+            destination: end,
+            travelMode: 'WALKING'
+          }, function (response, status) {
+            if (status === 'OK') {
+              directionsRenderer.setDirections(response);
+            } else {
+              window.alert('Directions request failed due to ' + status);
+            }
+          });
+        }
+      </script>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap">
+      </script>
+      <script>
+        <!-- service workerの登録関係 
+        -->
+        if
+        ('serviceWorker'
+        in
+        navigator)
+        {
+        navigator.serviceWorker.register('service_worker.js').then(function (registration)
+        {
+        console.log('ServiceWorker
+        registration
+        successful
+        with
+        scope:
+        ',
+        registration.scope);
+        }).catch(function (err)
+        {
+        console.log('ServiceWorker
+        registration
+        failed:
+        ',
+        err);
         });
         }
-    </script>
-  </body>
+      </script>
+    </body>
+
 </html>

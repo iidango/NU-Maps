@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
@@ -28,23 +30,23 @@
   <header style="background-color: #fff;">
     <nav style="border:1px ridge;　background-color: #fff;">
 
-   <div id="hamburger">
-       <div class="icon-animation type-1">
-           <span class="top"></span>
-           <span class="middle"></span>
-           <span class="bottom"></span>
-       </div>
-   </div>
-   <div class="nav_sp">
-       <div class="nav_sp_top"><a href="#"></a></div>
-       <ul class="clearfix">
-         <li><a href="index.html">お知らせ</a></li>
-         <li><a href="#">NU-Mapsの使い方</a></li>
-         <li><a href="#">言語/Language</a></li>
-         <li><a href="login.html">ログイン</a></li>
-       </ul>
-   </div>
-   <div id="wrapper"></div>
+      <div id="hamburger">
+        <div class="icon-animation type-1">
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </div>
+      </div>
+      <div class="nav_sp">
+        <div class="nav_sp_top"><a href="#"></a></div>
+        <ul class="clearfix">
+          <li><a href="index.html">お知らせ</a></li>
+          <li><a href="#">NU-Mapsの使い方</a></li>
+          <li><a href="#">言語/Language</a></li>
+          <li><a href="login.html">ログイン</a></li>
+        </ul>
+      </div>
+      <div id="wrapper"></div>
 
 
       <!--
@@ -52,56 +54,56 @@
       <a style="font-family:arial block; font-size: 40px; margin-left: 20px;margin-right:auto;margin-left:auto;"class="navbar-brand" href="index.html">NU Maps</a>
     -->
       <div style="margin-left:30px;">
-        <img style="width:40px;height:40px;margin-top:-25px;"src="images/img.png" alt="サンプル" align="top">
-      <a style="font-family:arial block; color:#4B7198;font-size: 40px; margin:0 auto;margin-right:50px;" href="index.html">NU Maps</a>
+        <img style="width:40px;height:40px;margin-top:-25px;" src="images/img.png" alt="サンプル" align="top">
+        <a style="font-family:arial block; color:#4B7198;font-size: 40px; margin:0 auto;margin-right:50px;"
+          href="index.html">NU Maps</a>
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <body style="background-color: #4ad5ff;">
+
+    <div
+      style="font-size: 20px;background-color:#ffffff; padding: 10px; margin-right:0px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px; border:1px ridge; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
+      <div style="text-align: center;">
+        <div style="margin-right:10px;">現在地　　　＞　　　<a href="root.html">目的地</a></div>
+      </div>
     </div>
 
-</nav>
+    <div
+      style="font-size: 20px;background-color:#ffffff; padding: 10px; margin-right:0px; margin-left: 10px; margin-top: 15px; margin-bottom: 10px; border:1px ridge; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
+      <div style="text-align:center;">　　目的地を選択　<a style="font-size: 15px" href="index.html">キャンセル<a /></div>
+      <hr style="margin-top: 2px;">
 
-</header>
-
-
-
-<body style="background-color: #4ad5ff;">
-
-<div style="font-size: 20px;background-color:#ffffff; padding: 10px; margin-right:0px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px; border:1px ridge; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
-<div style="text-align: center;"><div style="margin-right:10px;">現在地　　　＞　　　<a href="root.html">目的地</a></div></div>
-</div>
-
-<div style="font-size: 20px;background-color:#ffffff; padding: 10px; margin-right:0px; margin-left: 10px; margin-top: 15px; margin-bottom: 10px; border:1px ridge; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
-         <div style="text-align:center;">　　　目的地を選択　<a style="font-size: 15px" href="index.html">キャンセル<a/></div>
-        <hr style="margin-top: 2px;">
-
-       <p style="font-size: 20px;margin-left: 10px; margin-top: 10px;">お探しの建物名</p>
-       <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
-       <select class="form-control form-control-lg">
-         <option value="サンプル1">全学教育等</option>
-         <option value="サンプル2">中央図書館</option>
-         <option value="サンプル3">選択肢のサンプル3</option>
-         <option value="サンプル4">選択肢のサンプル4</option>
-         <option value="サンプル5">選択肢のサンプル5</option>
-       </select>
-       </div>
-<!--
+      <p style="font-size: 20px;margin-left: 10px; margin-top: 10px;">お探しの建物名</p>
+      <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
+        <select class="form-control form-control-lg" id="building" name="building">
+          <option value="">選択してください</option>
+          <option value="0">全学教育等</option>
+          <option value="1">中央図書館</option>
+        </select>
+      </div>
+      <!--
 <div style="padding: 10px; margin-right:0px; margin-left: 10px;  margin-bottom: 10px; border: 1px solid #333333; border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
 
 </div>
 -->
-        <p style="margin-left: 10px; margin-top: 10px;">お探しの部屋名</p>
-        <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
-        <select  class="form-control form-control-lg">
-          <option value="サンプル1">C10</option>
-          <option value="サンプル2">C11</option>
-          <option value="サンプル3">選択肢のサンプル3</option>
-          <option value="サンプル4">選択肢のサンプル4</option>
-          <option value="サンプル5">選択肢のサンプル5</option>
+      <p style="margin-left: 10px; margin-top: 10px;">お探しの部屋名</p>
+      <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
+        <select class="form-control form-control-lg" id="room" name="room">
+          <option value="">選択してください</option>
         </select>
-       </div>
-        <div style="margin-top: 45px;text-align: center;">
-          <a href="search.html">
-            <button style="background-color:#ffffff; width:160px;"type="button" class="btn btn-secondary btn-lg"><div style="color:#00bfff;">検索</div>
-            </button>
-          </a>
-        </div>
       </div>
-</body>
+      <div style="margin-top: 45px;text-align: center;">
+        <a href="search.html">
+          <button style="background-color:#ffffff; width:160px;" type="button" class="btn btn-secondary btn-lg">
+            <div style="color:#00bfff;">検索</div>
+          </button>
+        </a>
+      </div>
+    </div>
+  </body>
