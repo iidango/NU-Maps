@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
@@ -80,12 +81,10 @@
 
       <p style="font-size: 20px;margin-left: 10px; margin-top: 10px;">お探しの建物名</p>
       <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
-        <select class="form-control form-control-lg">
-          <option value="サンプル1">全学教育等</option>
-          <option value="サンプル2">中央図書館</option>
-          <option value="サンプル3">選択肢のサンプル3</option>
-          <option value="サンプル4">選択肢のサンプル4</option>
-          <option value="サンプル5">選択肢のサンプル5</option>
+        <select class="form-control form-control-lg" id="building" name="building">
+          <option value="">選択してください</option>
+          <option value="0">全学教育等</option>
+          <option value="1">中央図書館</option>
         </select>
       </div>
       <!--
@@ -95,12 +94,8 @@
 -->
       <p style="margin-left: 10px; margin-top: 10px;">お探しの部屋名</p>
       <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
-        <select class="form-control form-control-lg">
-          <option value="サンプル1">C10</option>
-          <option value="サンプル2">C11</option>
-          <option value="サンプル3">選択肢のサンプル3</option>
-          <option value="サンプル4">選択肢のサンプル4</option>
-          <option value="サンプル5">選択肢のサンプル5</option>
+        <select class="form-control form-control-lg" id="room" name="room">
+          <option value="">選択してください</option>
         </select>
       </div>
       <div style="margin-top: 45px;text-align: center;">
