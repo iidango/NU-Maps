@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="js/script.js"></script>
     <script type="text/javascript" src="hum_icon.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="manifest" href="manifest.json">
@@ -102,45 +102,36 @@
   </head>
 
   <header style="background-color: #fff;">
+
     <nav style="　background-color: #fff;">
-
-      <div id="hamburger">
-        <div class="icon-animation type-1">
-          <span class="top"></span>
-          <span class="middle"></span>
-          <span class="bottom"></span>
+      <div style="text-align:center;">
+        <div id="hamburger">
+          <div class="icon-animation type-1">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+          </div>
         </div>
-      </div>
-      <div class="nav_sp">
-        <div class="nav_sp_top"><a href="#"></a></div>
-        <ul class="clearfix">
-          <li><a href="index.html">お知らせ</a></li>
-          <li><a href="#">NU-Mapsの使い方</a></li>
-          <li><a href="#">言語/Language</a></li>
-          <li><a href="login.html">ログイン</a></li>
-        </ul>
-      </div>
-      <div id="wrapper"></div>
+        <div class="nav_sp">
+          <div class="nav_sp_top"><a href="#"></a></div>
+          <ul class="clearfix">
+            <li><a href="index.html">お知らせ</a></li>
+            <li><a href="#">NU-Mapsの使い方</a></li>
+            <li><a href="#">言語/Language</a></li>
+            <li><a href="login.html">ログイン</a></li>
+          </ul>
+          </div>
+        <div id="wrapper"></div>
 
-
-      <!--
-      <div style="border:1px ridge;border-bottom-left-radius: 30px;　background-color: #fff;">
-      <a style="font-family:arial block; font-size: 40px; margin-left: 20px;margin-right:auto;margin-left:auto;"class="navbar-brand" href="index.html">NU Maps</a>
-    -->
-      <div style="margin-left:30px;">
-        <img style="width:40px;height:40px;margin-top:-25px;" src="images/img.png" alt="サンプル" align="top">
-        <a style="font-family:arial block; color:#4B7198;font-size: 40px; margin:0 auto;margin-right:50px;"
-          href="index.html">NU Maps</a>
+        <a style="font-family:arial block; color:#4B7198;font-size: 40px;" href="index.html">NU Maps</a>
       </div>
-
     </nav>
 
-  </header>
-
-  <body>
+</header>
 
     <body>
-      <div style="f" id="floating-panel">
+
+      <div style="opacity: 0.7;" id="floating-panel">
         現在地
         <select style="" id="start" class="custom-select custom-select-sm">
           <option value="名古屋大学駅">名古屋大学駅</option>
@@ -164,6 +155,10 @@
       </div>
       </div>
       <!--<div id="right-panel"></div>-->
+
+
+
+
       <div id="map"></div>
       <script>
         function initMap() {
