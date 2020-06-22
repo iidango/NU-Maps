@@ -116,9 +116,13 @@ function kyoikuto() {
 }
 
 
+
+//search.html ルーティング
+
   function initMap() {
     var directionsRenderer = new google.maps.DirectionsRenderer;
     var directionsService = new google.maps.DirectionsService;
+    var btn = document.getElementById('btn');
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 17,
       center: {
@@ -129,21 +133,94 @@ function kyoikuto() {
     directionsRenderer.setMap(map);
     directionsRenderer.setPanel(document.getElementById('right-panel'));
 
+
     var control = document.getElementById('floating-panel');
     control.style.display = 'block';
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 
     var onChangeHandler = function () {
       calculateAndDisplayRoute(directionsService, directionsRenderer);
+      var end = document.getElementById('end').value;
+      if(end == "全学教育棟本館"){
+      var marker = new google.maps.Marker({
+        position: {
+          lat: 35.154293,
+          lng: 136.962515
+        },
+
+        map: map
+      });
+
+      var box = '<div class="box">' +
+            '<a href="map.html">建物内表示</a>' +
+        '</div>'
+        var infowindow = new google.maps.InfoWindow({
+          content: box
+        });
+        infowindow.open(map, marker);
+      }else if(end == "全学教育棟A館"){
+        var marker = new google.maps.Marker({
+          position: {
+            lat: 35.155299,
+            lng: 136.962008
+          },
+          map: map
+        });
+
+        var box = '<div class="box">' +
+              '<a href="map.html">建物内表示</a>' +
+          '</div>'
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "名古屋大学 文系総合館"){
+        var marker = new google.maps.Marker({
+          position: {
+            lat: 35.153710,
+            lng: 136.963742
+          },
+          map: map
+        });
+
+        var box = '<div class="box">' +
+              '<a href="map.html">建物内表示</a>' +
+          '</div>'
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "名古屋大学 文系総合館"){
+        var marker = new google.maps.Marker({
+          position: {
+            lat: 35.154639,
+            lng: 136.966778
+          },
+          map: map
+        });
+
+        var box = '<div class="box">' +
+              '<a href="map.html">建物内表示</a>' +
+          '</div>'
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }
+
     };
-    document.getElementById('start').addEventListener('change', onChangeHandler);
-    document.getElementById('end').addEventListener('change', onChangeHandler);
-  }
+    //document.getElementById('start').addEventListener('change', onChangeHandler);
+    //document.getElementById('end').addEventListener('change', onChangeHandler);
+    btn.addEventListener('click', onChangeHandler);
+    }
 
   function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     var start = document.getElementById('start').value;
     var end = document.getElementById('end').value;
-    directionsService.route({
+        directionsService.route({
       origin: start,
       destination: end,
       travelMode: 'WALKING'
@@ -154,4 +231,5 @@ function kyoikuto() {
         window.alert('Directions request failed due to ' + status);
       }
     });
+
   }

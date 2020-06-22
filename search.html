@@ -152,6 +152,7 @@
           <option value="ナショナルイノベーションコンプレックス">NIC</option>
           <option value="ファミリーマート 名古屋大学店">Lファミリーマート 名古屋大学店</option>
         </select>
+        <button id="btn"　type="button" class="btn btn-outline-secondary">検索</button>
       </div>
       </div>
       <!--<div id="right-panel"></div>-->
@@ -160,47 +161,7 @@
 
 
       <div id="map"></div>
-      <script>
-        function initMap() {
-          var directionsRenderer = new google.maps.DirectionsRenderer;
-          var directionsService = new google.maps.DirectionsService;
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: {
-              lat: 35.154639,
-              lng: 136.966778
-            }
-          });
-          directionsRenderer.setMap(map);
-          directionsRenderer.setPanel(document.getElementById('right-panel'));
-
-          var control = document.getElementById('floating-panel');
-          control.style.display = 'block';
-          map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
-
-          var onChangeHandler = function () {
-            calculateAndDisplayRoute(directionsService, directionsRenderer);
-          };
-          document.getElementById('start').addEventListener('change', onChangeHandler);
-          document.getElementById('end').addEventListener('change', onChangeHandler);
-        }
-
-        function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-          var start = document.getElementById('start').value;
-          var end = document.getElementById('end').value;
-          directionsService.route({
-            origin: start,
-            destination: end,
-            travelMode: 'WALKING'
-          }, function (response, status) {
-            if (status === 'OK') {
-              directionsRenderer.setDirections(response);
-            } else {
-              window.alert('Directions request failed due to ' + status);
-            }
-          });
-        }
-      </script>
+      
       <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap">
       </script>
@@ -231,6 +192,7 @@
         });
         }
       </script>
+
     </body>
 
 </html>
