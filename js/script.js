@@ -6,6 +6,8 @@ window.onload = function () {
   building.onchange = changeCategory;
 };
 
+var marker;
+
 // ジャンルの選択肢が変更された際の動作
 
 function changeCategory() {
@@ -140,9 +142,10 @@ function kyoikuto() {
 
     var onChangeHandler = function () {
       calculateAndDisplayRoute(directionsService, directionsRenderer);
+      marker.setMap(null);
       var end = document.getElementById('end').value;
       if(end == "全学教育棟本館"){
-      var marker = new google.maps.Marker({
+      marker = new google.maps.Marker({
         position: {
           lat: 35.154293,
           lng: 136.962515
@@ -159,7 +162,7 @@ function kyoikuto() {
         });
         infowindow.open(map, marker);
       }else if(end == "全学教育棟A館"){
-        var marker = new google.maps.Marker({
+        marker = new google.maps.Marker({
           position: {
             lat: 35.155299,
             lng: 136.962008
@@ -176,7 +179,7 @@ function kyoikuto() {
           infowindow.open(map, marker);
 
       }else if(end == "名古屋大学 文系総合館"){
-        var marker = new google.maps.Marker({
+        marker = new google.maps.Marker({
           position: {
             lat: 35.153710,
             lng: 136.963742
@@ -193,7 +196,7 @@ function kyoikuto() {
           infowindow.open(map, marker);
 
       }else if(end == "名古屋大学 文系総合館"){
-        var marker = new google.maps.Marker({
+        marker = new google.maps.Marker({
           position: {
             lat: 35.154639,
             lng: 136.966778
