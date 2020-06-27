@@ -134,7 +134,8 @@ function kyoikuto() {
       //ここからコントロールの設
     zoomControl:　false,
     mapTypeControl: false,
-    scaleControl: false
+    scaleControl: false,
+    streetViewControl: false
     });
     directionsRenderer.setMap(map);
     directionsRenderer.setPanel(document.getElementById('right-panel'));
