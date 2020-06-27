@@ -130,7 +130,11 @@ function kyoikuto() {
       center: {
         lat: 35.154639,
         lng: 136.966778
-      }
+      },
+      //ここからコントロールの設
+    zoomControl:　false,
+    mapTypeControl: false,
+    scaleControl: false
     });
     directionsRenderer.setMap(map);
     directionsRenderer.setPanel(document.getElementById('right-panel'));
