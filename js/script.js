@@ -142,7 +142,9 @@ function kyoikuto() {
 
     var onChangeHandler = function () {
       calculateAndDisplayRoute(directionsService, directionsRenderer);
-      marker.setMap(null);
+      if(marker){
+        marker.setMap(null);
+      }
       var end = document.getElementById('end').value;
       if(end == "全学教育棟本館"){
       marker = new google.maps.Marker({
