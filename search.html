@@ -123,7 +123,7 @@
         <div
          style="font-size: 20px;background-color:#ffffff; padding: 10px; margin-right:10px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px;  border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
           <div style="text-align: center;">
-            <div style="margin-right:10px;">現在地　　　＞　　　<a href="search.html">目的地</a></div>
+            <div style="margin-right:10px;">現在地　　　＞　　　<a href="root.html">目的地</a></div>
           </div>
         </div>
         <div
@@ -141,7 +141,7 @@
 
       <p style="margin-left: 10px; margin-top: 10px;">目的地</p>
       <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
-        <select id="end" class="form-control form-control-lg">
+        <select id="building" class="form-control form-control-lg">
           <option value=""></option>
           <option value="全学教育棟本館">全学教育棟本館</option>
           <option value="全学教育棟A館">全学教育棟A館</option>
@@ -176,8 +176,11 @@
       document.getElementById("floating-panel").style.display ="block";
 
       function clickBtn1(){
+        var end = document.getElementById('building').value;
       	const p1 = document.getElementById("floating-panel");
-
+        if(end == ""){
+          alert('目的地が選択されていません。')
+        }else{
       	if(p1.style.display=="block"){
       		// noneで非表示
       		p1.style.display ="none";
@@ -186,6 +189,7 @@
       		p1.style.display ="block";
       	}
       }
+    }
       </script>
 
       <script async defer

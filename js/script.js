@@ -149,7 +149,7 @@ function kyoikuto() {
       if(marker){
         marker.setMap(null);
       }
-      var end = document.getElementById('end').value;
+      var end = document.getElementById('building').value;
       if(end == "全学教育棟本館"){
       marker = new google.maps.Marker({
         position: {
@@ -228,7 +228,7 @@ function kyoikuto() {
 
   function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     var start = document.getElementById('start').value;
-    var end = document.getElementById('end').value;
+    var end = document.getElementById('building').value;
         directionsService.route({
       origin: start,
       destination: end,
@@ -237,7 +237,7 @@ function kyoikuto() {
       if (status === 'OK') {
         directionsRenderer.setDirections(response);
       } else {
-        window.alert('Directions request failed due to ' + status);
+
       }
     });
 
