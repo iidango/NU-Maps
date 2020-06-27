@@ -33,17 +33,10 @@
       }
 
       #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 25%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
+        background-color: #4ad5ff;
         text-align: center;
         font-family: 'Roboto', 'sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
+
       }
 
       #right-panel {
@@ -131,14 +124,30 @@
 
     <body>
 
-      <div style="opacity: 0.7;" id="floating-panel">
-        現在地
-        <select style="" id="start" class="custom-select custom-select-sm">
+      <div style="background-color: #4ad5ff; height:100%;" id="floating-panel">
+
+        <div
+         style="font-size: 20px;background-color:#ffffff; padding: 10px; margin-right:10px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px;  border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
+          <div style="text-align: center;">
+            <div style="margin-right:10px;">現在地　　　＞　　　<a href="root.html">目的地</a></div>
+          </div>
+        </div>
+        <div
+          style="font-size: 20px;background-color:#ffffff; padding: 10px; margin-right:10px; margin-left: 10px; margin-top: 15px; margin-bottom: 10px;  border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
+          <div style="text-align:center;">　　目的地を選択　<a style="font-size: 15px" href="index.html">キャンセル<a /></div>
+          <hr style="margin-top: 2px;">
+
+          <p style="font-size: 20px;margin-left: 10px; margin-top: 10px;">現在地</p>
+          <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
+
+        <select style="" id="start" class="form-control form-control-lg">
           <option value="名古屋大学駅">名古屋大学駅</option>
         </select>
+      </div>
 
-        目的地
-        <select id="end" class="custom-select custom-select-sm">
+      <p style="margin-left: 10px; margin-top: 10px;">目的地</p>
+      <div style="margin-left: 10px;margin-right: 10px;margin-top:-14px;">
+        <select id="end" class="form-control form-control-lg">
           <option value=""></option>
           <option value="全学教育棟本館">全学教育棟本館</option>
           <option value="全学教育棟A館">全学教育棟A館</option>
@@ -152,16 +161,39 @@
           <option value="ナショナルイノベーションコンプレックス">NIC</option>
           <option value="ファミリーマート 名古屋大学店">Lファミリーマート 名古屋大学店</option>
         </select>
-        <button id="btn"　type="button" class="btn btn-outline-secondary">検索</button>
+        <div style="margin-top: 45px;text-align: center;">
+
+            <button id="btn" style="background-color:#ffffff; width:160px;" type="button" class="btn btn-secondary btn-lg" onclick="clickBtn1()">
+              <div style="color:#00bfff;">検索</div>
+            </button>
+
+        </div>
       </div>
       </div>
+  </div>
       <!--<div id="right-panel"></div>-->
 
 
 
 
       <div id="map"></div>
-      
+      <script>
+      //初期表示は非表示
+      document.getElementById("floating-panel").style.display ="block";
+
+      function clickBtn1(){
+      	const p1 = document.getElementById("floating-panel");
+
+      	if(p1.style.display=="block"){
+      		// noneで非表示
+      		p1.style.display ="none";
+      	}else{
+      		// blockで表示
+      		p1.style.display ="block";
+      	}
+      }
+      </script>
+
       <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap">
       </script>
