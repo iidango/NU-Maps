@@ -13,19 +13,19 @@ var marker;
 function changeCategory() {
   // 変更後のカテゴリを取得
   var changedCategory = building.value;
-  if (changedCategory == "0") {
+  if (changedCategory == "全学教育棟本館") {
     // カテゴリに和食が選択された場合
     setZengakukyoikuto();
-  } else if (changedCategory == "1") {
+  } else if (changedCategory == "全学教育棟A館") {
     // カテゴリにアジア料理が選択された場合
     Zengakukyoikuto();
-  } else if (changedCategory == "10") {
+  } else if (changedCategory == "名古屋大学 文系総合館") {
     // カテゴリにアジア料理が選択された場合
     gakukyoikuto();
-  }else if (changedCategory == "11") {
+  }else if (changedCategory == "名古屋大学附属図書館") {
     // カテゴリにアジア料理が選択された場合
     kyoikuto();
-  }else if (changedCategory == "1") {
+  }else if (changedCategory == "名古屋大学本部学務部 教養教育院全学教育教務掛") {
     // カテゴリにアジア料理が選択された場合
     setSample2();
   }else {
