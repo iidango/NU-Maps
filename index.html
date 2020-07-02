@@ -89,6 +89,7 @@
       <div id="labelCode_7" tabindex="-1" value="000"></div>
       <div id="labelCode_8" tabindex="-1" value="000"></div>
       <div id="labelCode_9" tabindex="-1" value="000"></div>
+      <div id="labelCode_10" tabindex="-1" value="000"></div>
 
 
       <div style="background-color: #80DEEA; height:100%;" id="floating-panel">
@@ -133,7 +134,7 @@
 
             <div style="text-align:center;">
               <button id="btn" style="background-color:#4BACBB; width:160px;margin-top:60px;" type="button" class="btn btn-outline-light"onclick="clickBtn1()">
-                <div id="label7" style="font-size: 22px;color:#fff;">検索</div>
+                <div id="label10" style="font-size: 22px;color:#fff;">検索</div>
               </button>
             </div>
 </div>
@@ -235,6 +236,12 @@
       	} else {
       		document.getElementById("labelCode_9").value = '999';
       		document.getElementById("start").value = '名古屋大学駅/';
+      	}if (document.getElementById("labelCode_10").value == '999') {
+      		document.getElementById("labelCode_10").value = '000';
+      		document.getElementById("label10").innerText = '検索';
+      	} else {
+      		document.getElementById("labelCode_10").value = '999';
+      		document.getElementById("label10").innerText = 'Search';
       	}
 
       	return true;
