@@ -14,22 +14,22 @@ function changeCategory() {
   // 変更後のカテゴリを取得
   var changedCategory = building.value;
   if (changedCategory == "全学教育棟本館") {
-    // カテゴリに和食が選択された場合
+
     setZengakukyoikuto();
   } else if (changedCategory == "全学教育棟A館") {
-    // カテゴリにアジア料理が選択された場合
+
     Zengakukyoikuto();
   } else if (changedCategory == "名古屋大学 文系総合館") {
-    // カテゴリにアジア料理が選択された場合
+
     gakukyoikuto();
   }else if (changedCategory == "名古屋大学附属図書館") {
-    // カテゴリにアジア料理が選択された場合
+
     kyoikuto();
   }else if (changedCategory == "名古屋大学本部学務部 教養教育院全学教育教務掛") {
-    // カテゴリにアジア料理が選択された場合
+
     setSample2();
   }else {
-    // カテゴリにヨーロッパ料理が選択された場合
+
     setEuropeFoods();
   }
 }
@@ -42,11 +42,25 @@ function setZengakukyoikuto() {
   //選択肢
   var rooms = [
     { cd: "", label: "選択して下さい" },
-    { cd: "0", label: "C10" },
-    { cd: "1", label: "C11" },
-    { cd: "2", label: "C12" },
-    { cd: "2", label: "C13" },
-    { cd: "2", label: "sample" },
+    { cd: "C10", label: "C10" },
+    { cd: "C11", label: "C11" },
+    { cd: "C12", label: "C12" },
+    { cd: "C13", label: "C13" },
+    { cd: "C14", label: "C14" },
+    { cd: "C15", label: "C15" },
+    { cd: "C20", label: "C20" },
+    { cd: "C21", label: "C21" },
+    { cd: "C22", label: "C22" },
+    { cd: "C23", label: "C23" },
+    { cd: "C24", label: "C24" },
+    { cd: "C25", label: "C25" },
+    { cd: "C30", label: "C30" },
+    { cd: "C31", label: "C31" },
+    { cd: "C32", label: "C32" },
+    { cd: "C33", label: "C33" },
+    { cd: "C34", label: "C34" },
+    { cd: "C35", label: "C35" },
+    { cd: "C36", label: "C36" },
   ];
 
   rooms.forEach(function (value) {
@@ -64,11 +78,19 @@ function Zengakukyoikuto() {
   //選択肢
   var rooms = [
     { cd: "", label: "選択して下さい" },
-    { cd: "0", label: "A10" },
-    { cd: "1", label: "A11" },
-    { cd: "2", label: "A12" },
-    { cd: "2", label: "A13" },
-    { cd: "2", label: "sample" },
+    { cd: "A11", label: "A11" },
+    { cd: "A12", label: "A12" },
+    { cd: "A13", label: "A13" },
+    { cd: "A14", label: "A14" },
+    { cd: "A15", label: "A15" },
+    { cd: "A21", label: "A21" },
+    { cd: "A26", label: "A26" },
+    { cd: "A27", label: "A27" },
+    { cd: "A28", label: "A28" },
+    { cd: "A31", label: "A31" },
+    { cd: "A32", label: "A32" },
+    { cd: "A33", label: "A33" },
+    { cd: "A34", label: "A34" },
   ];
 
   rooms.forEach(function (value) {
@@ -160,10 +182,15 @@ function kyoikuto() {
 
         map: map
       });
-
-      var box = '<div class="box">' +
-            '<a href="map.html">建物内表示</a>' +
-        '</div>'
+      if (document.getElementById("labelCode_2").value == '999') {
+        var box = '<div class="box">' +
+              '<a href="map.html">Display in building</a>' +
+          '</div>'
+        } else {
+        var box = '<div class="box">' +
+              '<a href="map.html">建物内表示</a>' +
+          '</div>'
+        }
         var infowindow = new google.maps.InfoWindow({
           content: box
         });
@@ -177,9 +204,15 @@ function kyoikuto() {
           map: map
         });
 
-        var box = '<div class="box">' +
-              '<a href="map.html">建物内表示</a>' +
-          '</div>'
+        if (document.getElementById("labelCode_2").value == '999') {
+          var box = '<div class="box">' +
+                '<a href="map.html">Display in building</a>' +
+            '</div>'
+          } else {
+          var box = '<div class="box">' +
+                '<a href="map.html">建物内表示</a>' +
+            '</div>'
+          }
           var infowindow = new google.maps.InfoWindow({
             content: box
           });
@@ -194,9 +227,15 @@ function kyoikuto() {
           map: map
         });
 
-        var box = '<div class="box">' +
-              '<a href="map.html">建物内表示</a>' +
-          '</div>'
+        if (document.getElementById("labelCode_2").value == '999') {
+          var box = '<div class="box">' +
+                '<a href="map.html">Display in building</a>' +
+            '</div>'
+          } else {
+          var box = '<div class="box">' +
+                '<a href="map.html">建物内表示</a>' +
+            '</div>'
+          }
           var infowindow = new google.maps.InfoWindow({
             content: box
           });
@@ -211,9 +250,15 @@ function kyoikuto() {
           map: map
         });
 
-        var box = '<div class="box">' +
-              '<a href="map.html">建物内表示</a>' +
-          '</div>'
+        if (document.getElementById("labelCode_2").value == '999') {
+          var box = '<div class="box">' +
+                '<a href="map.html">Display in building</a>' +
+            '</div>'
+          } else {
+          var box = '<div class="box">' +
+                '<a href="map.html">建物内表示</a>' +
+            '</div>'
+          }
           var infowindow = new google.maps.InfoWindow({
             content: box
           });

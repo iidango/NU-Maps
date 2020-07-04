@@ -49,6 +49,11 @@
       }
 
     </style>
+    <script>
+    window.onload = function () {
+        document.getElementById("labelCode_2").value = '999';
+    };
+</script>
   </head>
 
 
@@ -66,10 +71,10 @@
           <div class="nav_sp">
             <div style="color:#fff;"class="nav_sp_top"><a href="#"></a></div>
             <ul class="clearfix">
-              <li><a id="label1" href="index.html">お知らせ</a></li>
-              <li><a id="label2" href="#">NU-Mapsの使い方</a></li>
+              <li><a id="label1" href="index.html">News</a></li>
+              <li><a id="label2" href="#">How to use NU-Maps</a></li>
               <li><a id="label3" href="#" onClick="JavaScript:testSelect();">言語/Language</a></li>
-              <li><a id="label4" href="login.html">ログイン</a></li>
+              <li><a id="label4" href="login.html">Login</a></li>
             </ul>
             </div>
           <div id="wrapper"></div>
@@ -80,7 +85,7 @@
 
   </header>
     <body>
-      <div id="labelCode_2"  value="100"></div>
+      <div id="labelCode_2" tabindex="-1" value='999'></div>
 
       <div style="background-color: #80DEEA; height:100%;" id="floating-panel">
         <div
@@ -88,11 +93,11 @@
 
         </div>
         <div style="text-align: center;">
-          <div id="label5" style="font-size: 22px; margin-top: -40px;margin-bottom: 7px;color:#fff;">出発地</div>
+          <div id="label5" style="font-size: 22px; margin-top: -40px;margin-bottom: 7px;color:#fff;">Present location</div>
         </div>
         <select class="form-control" id="start" name="building">
-          <option value="名古屋大学駅">現在地</option>
           <option value="名古屋大学駅/">Present location</option>
+          <option value="名古屋大学駅">現在地</option>
         </select>
 
             <div
@@ -100,10 +105,10 @@
 
             </div>
             <div style="text-align: center;">
-              <div id="label6" style="font-size: 22px; margin-top: -40px;margin-bottom: 7px;color:#fff; ">目的地</div>
+              <div id="label6" style="font-size: 22px; margin-top: -40px;margin-bottom: 7px;color:#fff; ">Destination</div>
             </div>
             <select id="building" class="form-control">
-              <option value="">建物名を選択してください</option>
+              <option value="-">Please select a building name</option>
               <option value="全学教育棟本館">全学教育棟本館</option>
               <option value="全学教育棟A館">全学教育棟A館</option>
               <option value="名古屋大学 文系総合館">文系総合館</option>
@@ -115,16 +120,16 @@
               <option value="名古屋大学 博物館">名古屋大学 博物館</option>
               <option value="ナショナルイノベーションコンプレックス">NIC</option>
               <option value="ファミリーマート 名古屋大学店">Lファミリーマート 名古屋大学店</option>
-              <option value="-">Please select a building name</option>
+              <option value="">建物名を選択してください</option>
             </select>
             <select class="form-control" id="room" name="room">
-              <option value="">部屋名を選択してください</option>
               <option value="-">Please select a room name</option>
+              <option value="">部屋名を選択してください</option>
             </select>
 
             <div style="text-align:center;">
               <button id="btn" style="background-color:#4BACBB; width:160px;margin-top:60px;" type="button" class="btn btn-outline-light"onclick="clickBtn1()">
-                <div id="label10" style="font-size: 22px;color:#fff;">検索</div>
+                <div id="label10" style="font-size: 22px;color:#fff;">Search</div>
               </button>
             </div>
 </div>
@@ -164,9 +169,9 @@
       <script>
       function testSelect() {
 
-      	if (document.getElementById("labelCode_2").value == '999') {
-      		document.getElementById("labelCode_2").value = '000';
-      		document.getElementById("label1").innerText = 'お知らせ';
+        if (document.getElementById("labelCode_2").value == '999') {
+          document.getElementById("labelCode_2").value = '100';
+          document.getElementById("label1").innerText = 'お知らせ';
           document.getElementById("label2").innerText = 'NU-Mapsの使い方';
           document.getElementById("label3").innerText = '言語/Language';
           document.getElementById("label4").innerText = 'ログイン';
@@ -178,8 +183,8 @@
           document.getElementById("label10").innerText = '検索';
 
       	} else {
-      		document.getElementById("labelCode_2").value = '999';
-      		document.getElementById("label1").innerText = 'News';
+          document.getElementById("labelCode_2").value = '999';
+          document.getElementById("label1").innerText = 'News';
           document.getElementById("label2").innerText = 'How to use NU-Maps';
           document.getElementById("label3").innerText = '言語/Language';
           document.getElementById("label4").innerText = 'Login';
@@ -189,7 +194,6 @@
           document.getElementById("room").value = '-';
           document.getElementById("start").value = '名古屋大学駅/';
           document.getElementById("label10").innerText = 'Search';
-
       	}
 
 

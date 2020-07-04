@@ -24,236 +24,77 @@
     <script type="text/javascript" src="hum_icon.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      #floating-panel {
-        width: 100%;
-        background: #4ad5ff;
-
-      }
-
-
-      }
-
-    </style>
   </head>
 
 
-    <header style="background-color: #4BACBB;">
 
-      <nav style="　background-color: #fff;">
+    <body style="background-color:#4BACB8;">
+    <div id="labelCode_1" tabindex="-1" value="000"></div>
+    <div style="text-align:center;">
+    <img style="margin-top: 100px;"src="images/111.png" width="200px;"height="235px;">
+   </div>
+
+      <div style="margin-top:65px; margin-left:10px; margin-right:10px; border:solid;border-width: 1px; border-color:#fff;height:261px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
+
+        <div style="margin-top:18px;margin-left: 15px;margin-right: 15px;border:solid;border-width: 2.5px; border-color:#fff;height:89px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
+        </div>
+        <a href="index.html">
         <div style="text-align:center;">
-          <div id="hamburger">
-            <div class="icon-animation type-1">
-              <span class="top"></span>
-              <span class="middle"></span>
-              <span class="bottom"></span>
-            </div>
-          </div>
-          <div class="nav_sp">
-            <div style="color:#fff;"class="nav_sp_top"><a href="#"></a></div>
-            <ul class="clearfix">
-              <li><a id="label1" href="index.html">お知らせ</a></li>
-              <li><a id="label2" href="#">NU-Mapsの使い方</a></li>
-              <li><a id="label3" href="#" onClick="JavaScript:testSelect();">言語/Language</a></li>
-              <li><a id="label4" href="login.html">ログイン</a></li>
-            </ul>
-            </div>
-          <div id="wrapper"></div>
-
-          <a style="font-family:arial block; color:#fff;font-size: 40px;" href="index.html">NU Maps</a>
+          <div id="label1"style="font-size:22px;margin-top: -60px;color:#fff;"onClick="JavaScript:test();">名大IDでログイン</div>
         </div>
-      </nav>
-
-  </header>
-    <body>
-      <div id="labelCode_1" tabindex="-1" value="000"></div>
-      <div id="labelCode_2" tabindex="-1" value="000"></div>
-      <div id="labelCode_3" tabindex="-1" value="000"></div>
-      <div id="labelCode_4" tabindex="-1" value="000"></div>
-      <div id="labelCode_5" tabindex="-1" value="000"></div>
-      <div id="labelCode_6" tabindex="-1" value="000"></div>
-      <div id="labelCode_7" tabindex="-1" value="000"></div>
-      <div id="labelCode_8" tabindex="-1" value="000"></div>
-      <div id="labelCode_9" tabindex="-1" value="000"></div>
-      <div id="labelCode_10" tabindex="-1" value="000"></div>
-
-
-      <div style="background-color: #80DEEA; height:100%;" id="floating-panel">
-        <div
-         style="font-size: 22px;height:47px; background-color:#4BACBB;  margin-top: 44px;">
-
+      </a>
+        <div style="text-align:center;">
+          <div id="label2"style="font-size:22px;margin-top:37px;color:#fff;">もしくは</div>
         </div>
-        <div style="text-align: center;">
-          <div id="label5" style="font-size: 22px; margin-top: -40px;margin-bottom: 7px;color:#fff;">出発地</div>
+        <div style="margin-top:10px;margin-left: 15px;margin-right: 15px;border:solid;border-width: 2.5px; border-color:#fff;height:52px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
         </div>
-        <select class="form-control" id="start" name="building">
-          <option value="名古屋大学駅">現在地</option>
-          <option value="名古屋大学駅/">Present location</option>
-        </select>
+        <div style="text-align:center;">
+          <a onClick="JavaScript:button_click_monitor ();">
+          <div id="label3"style="font-size:22px;margin-top: -43px;color:#fff;">ログイン無しで利用</div>
+        </a>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:22px;margin-top:18px;color:#fff;"><div id="label4"style="margin-left:260px;">※機能制限あり</div></div>
+        </div>
+      </div>
+        <div style="margin-top:20px;margin-left: 184px;margin-right: 18px;border:solid;border-width: 2.5px; border-color:#fff;height:33px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
 
-            <div
-             style="font-size: 22px;height:47px; background-color:#4BACBB;;  margin-top: 20px;  ">
-
-            </div>
-            <div style="text-align: center;">
-              <div id="label6" style="font-size: 22px; margin-top: -40px;margin-bottom: 7px;color:#fff; ">目的地</div>
-            </div>
-            <select id="building" class="form-control">
-              <option value="">建物名を選択してください</option>
-              <option value="全学教育棟本館">全学教育棟本館</option>
-              <option value="全学教育棟A館">全学教育棟A館</option>
-              <option value="名古屋大学 文系総合館">文系総合館</option>
-              <option value="名古屋大学附属図書館">名古屋大学附属図書館</option>
-              <option value="名古屋大学本部学務部 教養教育院全学教育教務掛">教養教育院全学教育教務課</option>
-              <option value="名古屋大学 生協北部食堂">生協北部食堂</option>
-              <option value="名古屋大学 生協南部書籍店">生協南部書籍店</option>
-              <option value="豊田講堂">豊田講堂</option>
-              <option value="名古屋大学 博物館">名古屋大学 博物館</option>
-              <option value="ナショナルイノベーションコンプレックス">NIC</option>
-              <option value="ファミリーマート 名古屋大学店">Lファミリーマート 名古屋大学店</option>
-              <option value="-">Please select a building name</option>
-            </select>
-            <select class="form-control" id="room" name="room">
-              <option value="">部屋名を選択してください</option>
-              <option value="-">Please select a room name</option>
-            </select>
-
-            <div style="text-align:center;">
-              <button id="btn" style="background-color:#4BACBB; width:160px;margin-top:60px;" type="button" class="btn btn-outline-light"onclick="clickBtn1()">
-                <div id="label10" style="font-size: 22px;color:#fff;">検索</div>
-              </button>
-            </div>
-</div>
-  </div>
-      <!--<div id="right-panel"<button id="btn" style="background-color:#ffffff; width:160px;" type="button" class="btn btn-secondary btn-lg" onclick="clickBtn1()">
-        <div style="color:#00bfff;">検索</div>
-      </button>></div>-->
+            <div style="font-size:22px;margin-left:5px;margin-top: -3px;color:#fff;"onClick="JavaScript:testSelect();"><img src="images/icon2000.png">日本語/English</div>
+        </div>
 
 
+        <script>
+        function testSelect() {
 
-
-      <div id="map"></div>
-      <script>
-      //初期表示は非表示
-      document.getElementById("floating-panel").style.display ="block";
-
-      function clickBtn1(){
-        var end = document.getElementById('building').value;
-      	const p1 = document.getElementById("floating-panel");
-        if(end == ""){
-          alert('目的地が選択されていません。')
-        }else if(end == "-"){
-          alert('No destination selected')
-        }else{
-      	if(p1.style.display=="block"){
-      		// noneで非表示
-      		p1.style.display ="none";
-      	}else{
-      		// blockで表示
-      		p1.style.display ="block";
-      	}
-      }
-    }
-      </script>
-
-      <script>
-      function testSelect() {
-
-      	if (document.getElementById("labelCode_1").value == '999') {
+          if (document.getElementById("labelCode_1").value == '999') {
       		document.getElementById("labelCode_1").value = '000';
-      		document.getElementById("label1").innerText = 'お知らせ';
-      	} else {
+      		document.getElementById("label1").innerText = '名大IDでログイン';
+          document.getElementById("label2").innerText = 'もしくは';
+          document.getElementById("label3").innerText = 'ログイン無しで利用';
+          document.getElementById("label4").innerText = '※機能制限あり';
+      	  } else {
       		document.getElementById("labelCode_1").value = '999';
-      		document.getElementById("label1").innerText = 'News';
-      	}
+      		document.getElementById("label1").innerText = 'Log in with your Nagoya University ID';
+          document.getElementById("label2").innerText = 'or';
+          document.getElementById("label3").innerText = 'Use without login';
+          document.getElementById("label4").innerText = '※Limited functionality';}
+        }
+        function test() {
+          alert("Cas認証実装予定")
 
-        if (document.getElementById("labelCode_2").value == '999') {
-          document.getElementById("labelCode_2").value = '000';
-          document.getElementById("label2").innerText = 'NU-Mapsの使い方';
-        } else {
-          document.getElementById("labelCode_2").value = '999';
-          document.getElementById("label2").innerText = 'How to use NU-Maps';
         }
 
-        if (document.getElementById("labelCode_3").value == '999') {
-      		document.getElementById("labelCode_3").value = '000';
-      		document.getElementById("label3").innerText = '言語/Language';
-      	} else {
-      		document.getElementById("labelCode_3").value = '999';
-      		document.getElementById("label3").innerText = '言語/Language';
-      	}
+        function button_click_monitor (){
+          if (document.getElementById("labelCode_1").value == '999') {
+            window.location.href = 'search2.html';
 
-        if (document.getElementById("labelCode_4").value == '999') {
-      		document.getElementById("labelCode_4").value = '000';
-      		document.getElementById("label4").innerText = 'ログイン';
-      	} else {
-      		document.getElementById("labelCode_4").value = '999';
-      		document.getElementById("label4").innerText = 'Login';
-      	}
-        if (document.getElementById("labelCode_5").value == '999') {
-      		document.getElementById("labelCode_5").value = '000';
-      		document.getElementById("label5").innerText = '現在地';
-      	} else {
-      		document.getElementById("labelCode_5").value = '999';
-      		document.getElementById("label5").innerText = 'Present location';
-      	}
-        if (document.getElementById("labelCode_6").value == '999') {
-      		document.getElementById("labelCode_6").value = '000';
-      		document.getElementById("label6").innerText = '目的地';
-      	} else {
-      		document.getElementById("labelCode_6").value = '999';
-      		document.getElementById("label6").innerText = 'Destination';
-      	}
-        if (document.getElementById("labelCode_7").value == '999') {
-      		document.getElementById("labelCode_7").value = '000';
-      		document.getElementById("building").value = '';
-      	} else {
-      		document.getElementById("labelCode_7").value = '999';
-      		document.getElementById("building").value = '-';
-      	}if (document.getElementById("labelCode_8").value == '999') {
-      		document.getElementById("labelCode_8").value = '000';
-      		document.getElementById("room").value = '';
-      	} else {
-      		document.getElementById("labelCode_8").value = '999';
-      		document.getElementById("room").value = '-';
-      	}if (document.getElementById("labelCode_9").value == '999') {
-      		document.getElementById("labelCode_9").value = '000';
-      		document.getElementById("start").value = '名古屋大学駅';
-      	} else {
-      		document.getElementById("labelCode_9").value = '999';
-      		document.getElementById("start").value = '名古屋大学駅/';
-      	}if (document.getElementById("labelCode_10").value == '999') {
-      		document.getElementById("labelCode_10").value = '000';
-      		document.getElementById("label10").innerText = '検索';
-      	} else {
-      		document.getElementById("labelCode_10").value = '999';
-      		document.getElementById("label10").innerText = 'Search';
-      	}
+          } else {
+            window.location.href = 'search.html';}
+          }
 
-      	return true;
-      }
-      </script>
+        </script>
 
-
-
-      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap">
-      </script>
-      <script>
+        <script>
         <!-- service workerの登録関係
         -->
         if
@@ -264,7 +105,7 @@
         navigator.serviceWorker.register('service_worker.js').then(function (registration)
         {
         console.log('ServiceWorker
-        registration
+        registratio
         successful
         with
         scope:
