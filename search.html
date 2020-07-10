@@ -43,7 +43,13 @@
         width: 100%;
         background: #4ad5ff;
 
+
+
+
       }
+  #floating-panel:before {
+
+}
 
 
       }
@@ -82,27 +88,29 @@
     <body>
       <div id="labelCode_2"  value="100"></div>
 
-      <div style="background-color: #80DEEA; height:100%;" id="floating-panel">
+      <div style="background-image : url(images/4.jpg); height:100%;" id="floating-panel">
         <div
-         style="font-size: 22px;height:47px; background-color:#4BACBB;  margin-top: 44px;">
+         style="font-size: 22px;height:100px; background-color:#fcfcfc ;  margin-top: 44px;">
 
         </div>
         <div style="text-align: center;">
-          <div id="label5" style="font-size: 22px; margin-top: -40px;margin-bottom: 7px;color:#fff;">出発地</div>
+          <div id="label5" style="font-size: 22px; margin-top: -92px;margin-bottom: 7px;color:#4BACBB;">出発地</div>
         </div>
-        <select class="custom-select" id="start" name="building">
+        <div style="margin-right:10px;margin-left:10px;">
+        <select style="margin-right:15px;border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"class="custom-select" id="start" name="building">
           <option value="名古屋大学駅">現在地</option>
           <option value="名古屋大学駅/">Present location</option>
         </select>
-
+       </div>
             <div
-             style="font-size: 22px;height:47px; background-color:#4BACBB;;  margin-top: 20px;  ">
+             style="font-size: 22px;height:150px; background-color:#fcfcfc ;  margin-top: 50px;  ">
 
             </div>
             <div style="text-align: center;">
-              <div id="label6" style="font-size: 22px; margin-top: -40px;margin-bottom: 7px;color:#fff; ">目的地</div>
+              <div id="label6" style="font-size: 22px; margin-top: -140px;margin-bottom: 7px;color:#4BACBB; ">目的地</div>
             </div>
-            <select id="building" class="custom-select">
+            <div style="margin-right:10px;margin-left:10px;">
+            <select style="border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"id="building" class="custom-select">
               <option value="">建物名を選択してください</option>
               <option value="全学教育棟本館">全学教育棟本館</option>
               <option value="全学教育棟A館">全学教育棟A館</option>
@@ -117,13 +125,15 @@
               <option value="ファミリーマート 名古屋大学店">Lファミリーマート 名古屋大学店</option>
               <option value="-">Please select a building name</option>
             </select>
-            <select class="custom-select" id="room" name="room">
+            </div>
+            <div style="margin-top:12px;margin-right:10px;margin-left:10px;">
+            <select style="border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"class="custom-select" id="room" name="room">
               <option value="">部屋名を選択してください</option>
               <option value="-">Please select a room name</option>
             </select>
-
+            </div>
             <div style="text-align:center;">
-              <button id="btn" style="background-color:#4BACBB; width:160px;margin-top:60px;" type="button" class="btn btn-outline-light"onclick="clickBtn1()">
+              <button id="btn" style="background-color:#4BACBB; width:250px;margin-top:60px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;" type="button" class="btn btn-outline-light"onclick="clickBtn1()">
                 <div id="label10" style="font-size: 22px;color:#fff;">検索</div>
               </button>
             </div>
