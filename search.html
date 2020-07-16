@@ -99,7 +99,7 @@
         <div style="margin-right:10px;margin-left:10px;">
         <select style="margin-right:15px;border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"class="custom-select" id="start" name="building">
           <option value="名古屋大学駅">現在地</option>
-          <option value="名古屋大学駅/">Present location</option>
+          <option value="現在地">Present location</option>
         </select>
        </div>
             <div
@@ -147,7 +147,27 @@
 
 
       <div id="map"></div>
+      <div id="lat" value=""></div>
+      <div id="log" value=""></div>
+      <div id="error" value=""></div>
 
+      <script>
+      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+      function successCallback(position) {
+        $('#lat').val(String(position.coords.latitude));
+        $('#log').val(String(position.coords.longitude));
+
+
+
+
+      }
+
+      function errorCallback(error) {
+        alert("名古屋大学駅を始点にします")
+        $('#error').val("error");
+
+      }
+</script>
       <script>
       //初期表示は非表示
       document.getElementById("floating-panel").style.display ="block";

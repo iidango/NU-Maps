@@ -143,6 +143,7 @@ function kyoikuto() {
 
 //search.html ルーティング
 
+
   function initMap() {
     var directionsRenderer = new google.maps.DirectionsRenderer;
     var directionsService = new google.maps.DirectionsService;
@@ -168,7 +169,13 @@ function kyoikuto() {
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 
     var onChangeHandler = function () {
+      var error = document.getElementById('error').value;
+      if(error == "error"){
+      calculateAndDisplayRoute1(directionsService, directionsRenderer);
+    }else{
       calculateAndDisplayRoute(directionsService, directionsRenderer);
+    }
+
       if(marker){
         marker.setMap(null);
       }
@@ -273,8 +280,27 @@ function kyoikuto() {
     }
 
   function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+    //var start = document.getElementById('start').value;
+    var end = document.getElementById('building').value;
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+        directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: end,
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }
+  function calculateAndDisplayRoute1(directionsService, directionsRenderer) {
     var start = document.getElementById('start').value;
     var end = document.getElementById('building').value;
+
         directionsService.route({
       origin: start,
       destination: end,
