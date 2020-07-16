@@ -55,6 +55,19 @@
       }
 
     </style>
+    <script>
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    function successCallback(position) {
+      $('#lat').val(String(position.coords.latitude));
+      $('#log').val(String(position.coords.longitude));
+    }
+
+    function errorCallback(error) {
+      alert("名古屋大学駅を始点にします")
+      $('#error').val("error");
+
+    }
+</script>
   </head>
 
 
@@ -151,23 +164,6 @@
       <div id="log" value=""></div>
       <div id="error" value=""></div>
 
-      <script>
-      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-      function successCallback(position) {
-        $('#lat').val(String(position.coords.latitude));
-        $('#log').val(String(position.coords.longitude));
-
-
-
-
-      }
-
-      function errorCallback(error) {
-        alert("名古屋大学駅を始点にします")
-        $('#error').val("error");
-
-      }
-</script>
       <script>
       //初期表示は非表示
       document.getElementById("floating-panel").style.display ="block";
