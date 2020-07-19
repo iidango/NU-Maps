@@ -343,7 +343,15 @@ function updateCurrentPosition() {
 
         currentPosition.setCenter(pos);
       }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
+        // 位置情報が取得できなかった場合の処理
+        // 名古屋大学駅の位置をセット
+        var pos = {
+          lat: 35.1547342,
+          lng: 136.9665566
+        };
+
+        currentPosition.setCenter(pos);
+        // handleLocationError(true, infoWindow, map.getCenter());
       });
     } else {
       // Browser doesn't support Geolocation
